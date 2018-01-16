@@ -1,0 +1,139 @@
+package edu.fju.exam;
+
+import java.util.Scanner;
+
+/*
+ 飲料販賣機模擬程式, 達成以下需求:
+1). 使用鍵盤輸入投幣金額, 只能輸入1, 5, 10元的硬幣
+2). 使用鍵盤選擇飲料, 有8種, 分別為a: 10元、b:15元、c:10元、d:18元、e:10元、f:20元、g:15元與h:18元。
+3). 每次投幣後,應先印出販賣機目前投入的總額
+4). 當餘額足夠,且選擇其中一個飲料後, 必須印出目前扣除飲料金額後的餘額,並印出”DON!”
+5). 當選擇一種飲料，而餘額不足時， 請出目前餘額，並印出”BEEP!”， 代表不足額
+6). 輸入0時, 結束 VendingMachine 類別的執行
+ */
+public class VendingMachine {
+
+	public static void main(String[] args) {
+		int n = 1;
+		int money = 0;
+		int a = 10;
+		int b = 15;
+		int c = 10;
+		int d = 18;
+		int e = 10;
+		int f = 20;
+		int g = 15;
+		int h = 18;
+		System.out.println("販賣機餘額:" + money);
+		do {
+			System.out.print("請投幣或選擇飲料(a,b,c,d,e,f,g,h),或按0結束:");
+			Scanner s = new Scanner(System.in);
+			String p = s.nextLine();
+			switch (p) {
+			case "1":
+				money = money + 1;
+				System.out.println("販賣機餘額:" + money);
+				break;
+			case "5":
+				money = money + 5;
+				System.out.println("販賣機餘額:" + money);
+				break;
+			case "10":
+				money = money + 10;
+				System.out.println("販賣機餘額:" + money);
+				break;
+			case "a":
+				if (money - a >= 0) {
+					money = money - a;
+					System.out.println("DON!");
+					System.out.println("販賣機餘額:" + money);
+				} else {
+					System.out.println("BEEP!");
+					System.out.println("販賣機餘額:" + money);
+				}
+				break;
+			case "b":
+				if (money - b >= 0) {
+					money = money - b;
+					System.out.println("DON!");
+					System.out.println("販賣機餘額:" + money);
+				} else {
+					System.out.println("BEEP!");
+					System.out.println("販賣機餘額:" + money);
+				}
+				break;
+			case "c":
+				if (money - c >= 0) {
+					money = money - c;
+					System.out.println("DON!");
+					System.out.println("販賣機餘額:" + money);
+
+				} else {
+					System.out.println("BEEP!");
+					System.out.println("販賣機餘額:" + money);
+				}
+				break;
+			case "d":
+				if (money - d >= 0) {
+					money = money - d;
+					System.out.println("DON!");
+					System.out.println("販賣機餘額:" + money);
+
+				} else {
+					System.out.println("BEEP!");
+					System.out.println("販賣機餘額:" + money);
+				}
+				break;
+			case "e":
+				if (money - e >= 0) {
+					money = money - e;
+					System.out.println("DON!");
+					System.out.println("販賣機餘額:" + money);
+
+				} else {
+					System.out.println("BEEP!");
+					System.out.println("販賣機餘額:" + money);
+				}
+				break;
+			case "f":
+				if (money - f >= 0) {
+					money = money - f;
+					System.out.println("DON!");
+					System.out.println("販賣機餘額:" + money);
+
+				} else {
+					System.out.println("BEEP!");
+					System.out.println("販賣機餘額:" + money);
+				}
+				break;
+			case "g":
+				if (money - g >= 0) {
+					money = money - g;
+					System.out.println("DON!");
+					System.out.println("販賣機餘額:" + money);
+
+				} else {
+					System.out.println("BEEP!");
+					System.out.println("販賣機餘額:" + money);
+				}
+				break;
+			case "h":
+				if (money - h >= 0) {
+					money = money - h;
+					System.out.println("DON!");
+					System.out.println("販賣機餘額:" + money);
+
+				} else {
+					System.out.println("BEEP!");
+					System.out.println("販賣機餘額:" + money);
+				}
+				break;
+			case "0":
+				n = -1;
+				break;
+			}
+		} while (n > 0);
+
+	}
+
+}
