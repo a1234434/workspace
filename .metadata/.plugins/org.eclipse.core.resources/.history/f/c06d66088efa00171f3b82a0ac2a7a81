@@ -8,7 +8,7 @@ public class Employee {
       String d="Danny";
       int c=31000;
 
-	public Employee(String j,int a) {
+	public Employee(String j,int a,String m,String d,int b,int c) {
 		this.j=j;
 		this.a=a;
 		this.b=b;
